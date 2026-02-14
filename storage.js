@@ -44,4 +44,6 @@ const Storage = {
     }
 };
 
-export default Storage;
+
+// Делаем Storage глобальным для доступа из app.js
+window.Storage = Storage;
