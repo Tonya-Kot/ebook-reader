@@ -19,6 +19,10 @@ body {
     display: block;
 }
 
+.screen-content {
+    padding: 20px; /* Отступы только у контента, а не у скрытого контейнера */
+}
+
 .welcome-content {
     text-align: center;
     margin-top: 50vh;
@@ -241,3 +245,4 @@ body.dark-theme input {
     border: 1px solid #555;
 
 }
+
