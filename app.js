@@ -1,5 +1,3 @@
-import Storage from './storage.js';
-
 class BookReaderApp {
     constructor() {
         this.currentUser = null;
@@ -276,3 +274,4 @@ function togglePassword(fieldId) {
         field.type = 'password';
     }
 }
+
