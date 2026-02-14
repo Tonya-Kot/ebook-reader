@@ -13,7 +13,6 @@ body {
 
 .screen {
     display: none;
-    padding: 20px;
 }
 
 .screen.active {
@@ -240,4 +239,5 @@ body.dark-theme input {
     background: #333;
     color: #f0f0f0;
     border: 1px solid #555;
+
 }
