@@ -19,7 +19,7 @@ body {
     display: block;
 }
 
-.screen-content {
+.welcome-content {
     padding: 20px; /* Отступы только у контента, а не у скрытого контейнера */
 }
 
@@ -245,4 +245,5 @@ body.dark-theme input {
     border: 1px solid #555;
 
 }
+
 
