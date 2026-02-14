@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e5eef5; /* Фон как в Telegram */
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.screen {
+    display: none;
+    padding: 20px;
+}
+
+.screen.active {
+    display: block;
+}
+
+.welcome-content {
+    text-align: center;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+
+.welcome-content h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.welcome-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 80%;
+    margin: 0 auto 20px;
+}
+
+#register-link, #login-link, #terms-link {
+    color: #3498db;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.password-field {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* Библиотека книг */
+.app-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #2c3e50;
+    color: white;
+}
+
+.app-header h1 {
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#books-container {
+    margin-top: 20px;
+}
+
+.empty-message {
+    text-align: center;
+    color: #777;
+    margin: 50px 0;
+}
+
+.add-button {
+    background: #27ae60;
+    width: fit-content;
+    margin: 20px auto;
+    display: block;
+}
+
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.book-cover {
+    width: 60px;
+    height: 80px;
+    background: #eee;
+    border-radius: 3px;
+    margin-right: 15px;
+}
+
+.more-options {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Боковое меню */
+.sidebar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #2c3e50;
+    color: white;
+    transition: left 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #34495e;
+}
+
+.sidebar li:hover {
+    background: #34495e;
+}
+
+/* Модальные окна */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: none;
+}
+
+.modal.active {
+    display: block;
+}
+
+/* Тёмная тема */
+body.dark-theme {
+    background: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-theme .book-item {
+    background: #2d2d2d;
+    color: #f0f0f0;
+}
+
+body.dark-theme .sidebar {
+    background: #1a1a1a;
+}
+
+body.dark-theme input {
+    background: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
