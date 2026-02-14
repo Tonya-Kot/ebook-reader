@@ -19,8 +19,12 @@ body {
     display: block;
 }
 
-.welcome-content {
-    padding: 20px; /* Отступы только у контента, а не у скрытого контейнера */
+.welcome-content,
+.register-content,
+.library-content,
+#profile-screen,
+#settings-screen {
+    padding: 20px;
 }
 
 .welcome-content {
@@ -245,5 +249,6 @@ body.dark-theme input {
     border: 1px solid #555;
 
 }
+
 
 
